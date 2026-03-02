@@ -1,0 +1,50 @@
+ 1009  source ~/.bashrc
+ 1010  mkdir ~/bioinf/hw_bioinformatics/linux_task/data/raw/
+ 1011  mkdir -p  ~/bioinf/hw_bioinformatics/linux_task/data/raw/
+ 1012  cd linux_task/data/raw/
+ 1013  touch sample1.tsv sample2.tsv sample3.tsv
+ 1014  ls
+ 1015  nano sample1.tsv 
+ 1016  cat sample1.tsv 
+ 1017  git commit -m 'Create raw data structure'
+ 1018  git add -A
+ 1019  git commit -m 'Create raw data structure'
+ 1020  echo "run_id: RUN001
+date: 2026-02-18
+sample: sample1
+platform: Illumina
+read_length: 150
+total_reads: 1024
+sample: sample2
+total_reads: 2048
+sample: sample3
+total_reads: 4096" > sequencing_summary.txt
+ 1021  ls
+ 1022  cat sequencing_summary.txt 
+ 1023  grep "sample" sequencing_summary.txt > samples_list.txt
+ 1024  wc -l samples_list.txt 
+ 1025  tail -n 5 samples_list.txt 
+ 1026  git add -A
+ 1027  git commit -m 'Add sample list and count'
+ 1028  git branch git-practice
+ 1029  git checkout git-practice 
+ 1030  echo "This is very important data." > important_note.txt
+ 1031  ls
+ 1032  rm important_note.txt 
+ 1033  git status
+ 1034  echo "This is very important data." > important_note.txt
+ 1035  git add
+ 1036  git add -A
+ 1037  rm important_note.txt 
+ 1038  echo "This is very important data." > important_note.txt
+ 1039  git add -A
+ 1040  git commit 
+ 1041  git commit -m 'шляпа'
+ 1042  rm important_note.txt 
+ 1043  git restore important_note.txt 
+ 1044  cd ..
+ 1045  nano git_command.txt
+ 1046  git add git_command.txt 
+ 1047  git commit -m 'Restore deleted file'
+ 1048  history
+ 1049  history | tail -n 50 > hw1_log.txt
